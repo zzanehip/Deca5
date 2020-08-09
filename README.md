@@ -4,10 +4,11 @@ Tethered Downgrade Your A5 Device Today. By @zzanehip.
 
 ## What is Deca5?
 * Deca5 (pronounced "Decaf") is a GUI tool to downgrade your A5 device. It is built with three things in mind: user-experience, performance, and reliability 👍.
-* Deca5 is unique, it is built entierly using Swift, SwiftUI, and C — it is built for modern versions of Mac OS. Moreover, much attention was given to the tool's design. look, and feel.
+* Deca5 is unique, it is built entierly using Swift, SwiftUI, and C — it is built for modern versions of Mac OS. Moreover, much attention was given to the tool's design, look, and feel.
 * And of course, Deca5 fully opensource 📂. Feel free to modify the tool to your liking. 
 * Deca5 will run on any Mac running Catalina (**10.15**) or Big Sur (**10.16**) 🖥️. It supports all **A5** (and thoertically some A6 devices)📱.
 * *Note, as of v1.0 Beta, Jailbreaking and Switchboard functionality has been temporarily removed due to various bugs. I'll restore the functionality in the next few days when all are fixed.*
+* ***The latest release of Deca5 can be downloaded from [here.](https://github.com/zzanehip/Deca5/releases/latest)***  
 
  
 ## Using Deca5
