@@ -47,6 +47,7 @@ Before Booting            |  After Booting
 
 ## And Of Course Thank You To
 * @a1exdandy for A5 Checkm8.
+* @nyansatan for A5 Checkm8.
 * @synackuk for A5 Checkm8 and idevicerestore work. 
 * @axi0mx for Checkm8.
 * @libimobiledevice for idevicerestore. 
