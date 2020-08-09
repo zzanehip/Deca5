@@ -52,6 +52,7 @@ Before Booting            |  After Booting
 * @libimobiledevice for idevicerestore. 
 * @iH8Sn0w for iBoot32Patcher.
 * @planetbeing for xpwn.
+* @Dora2 for iBSS execution.
 * @iOSReleases for firmware keys.
 * @Ralph0045 for iOS 4 fix info. 
 * @Exploit3dGuy for inspiration to make Deca5.
