@@ -7,7 +7,7 @@ Tethered Downgrade Your A5 Device Today. By @zzanehip.
 * Deca5 is unique, it is built entierly using Swift, SwiftUI, and C — it is built for modern versions of Mac OS. Moreover, much attention was given to the tool's design, look, and feel.
 * And of course, Deca5 fully opensource 📂. Feel free to modify the tool to your liking. 
 * Deca5 will run on any Mac running between El Capitan (**10.11**) and Big Sur (**11.0**) 🖥️. It supports all **A5** (and theoretically all A6) devices📱.
-* Users running **Catalina** or **Big Sur** can download Deca5. Users running between **El Capitan** and **Mojave** can download Deca5 (older Macs build). 
+* Users running **Catalina** or **Big Sur** can download Deca5. Users running between **El Capitan** and **Mojave** can download Deca5 "older Macs" build. 
 * To use Deca5 you must enter pwndfu (not kDFU) - this is possible thanks to @a1exdandy, @nyansatan, and @synackuk https://github.com/synackuk/checkm8-a5
 * *Note, as of v1.1, Jailbreaking and Switchboard functionality has been temporarily removed due to various bugs. I'll restore the functionality in the next few days when all are fixed.*
 * ***The latest release of Deca5 can be downloaded from [here.](https://github.com/zzanehip/Deca5/releases/latest)***  
@@ -45,7 +45,7 @@ Before Booting            |  After Booting
 		* https://github.com/zzanehip/deca5
 
 ## Version History
-	* v1.1 - Adds "older Macs build" which adds support for 10.11 to 10.14. Various other bug fixes and compilation performance improvements, as well. 
+	* v1.1 - Adds "older Macs" build which adds support for 10.11 to 10.14. Various other bug fixes and compilation performance improvements, as well. 
 	* v1.0 Beta - Launch
 
 ## And Of Course Thank You To
