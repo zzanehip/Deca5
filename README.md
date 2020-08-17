@@ -45,7 +45,7 @@ Before Booting            |  After Booting
 		* https://github.com/zzanehip/deca5
 
 ## Version History
-	* v1.1 - Adds "older Macs build" which add support for 10.11 to 10.14. Various other bug fixes and compilation performance improvements, as well. 
+	* v1.1 - Adds "older Macs build" which adds support for 10.11 to 10.14. Various other bug fixes and compilation performance improvements, as well. 
 	* v1.0 Beta - Launch
 
 ## And Of Course Thank You To
