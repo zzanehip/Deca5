@@ -32,7 +32,7 @@ class currentScreen: ObservableObject {
         case home
         case restore
         case boot
-        // case jailbreak
+       // case jailbreak
     
     }
     

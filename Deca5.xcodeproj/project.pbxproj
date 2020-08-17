@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0EA82424E0437C005C0DBF /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
 		0D56427E24DE348F005F4505 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
-		0D5642AD24DF19DE005F4505 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5642AC24DF19DE005F4505 /* libidevicerestore.a */; };
 		0D62600924CE254800330F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600824CE254800330F97 /* AppDelegate.swift */; };
 		0D62600B24CE254800330F97 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600A24CE254800330F97 /* Home.swift */; };
 		0D62600D24CE254A00330F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D62600C24CE254A00330F97 /* Assets.xcassets */; };
@@ -32,11 +32,17 @@
 		0D6DE85024D9D76300A57154 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE84224D9D75400A57154 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0D6DE85124D9D76600A57154 /* libusbmuxd.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0D6DE85224D9D76700A57154 /* libzip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE84124D9D75400A57154 /* libzip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0D6DE85424D9D78A00A57154 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE85324D9D78A00A57154 /* libcurl.dylib */; };
-		0D6DE85524D9D78D00A57154 /* libcurl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE85324D9D78A00A57154 /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0D6DE85E24D9EE3000A57154 /* libprerestore.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D6DE85D24D9EE3000A57154 /* libprerestore.c */; };
 		0D6FD25124DF473D0093BB8D /* MazzardM-Medium.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DBCFB7D24D2043C00E1CC97 /* MazzardM-Medium.otf */; };
 		0D6FD25224DF473D0093BB8D /* MazzardM-Bold.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DBCFB7324D09E3A00E1CC97 /* MazzardM-Bold.otf */; };
+		0D6FD25424DF6B500093BB8D /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; };
+		0D6FD25524DF6B590093BB8D /* libcurl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0D86FBDA24E8136D0029F3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBD924E8136D0029F3FC /* AppDelegate.swift */; };
+		0D86FBDC24E8136D0029F3FC /* Home_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBDB24E8136D0029F3FC /* Home_Old.swift */; };
+		0D86FBDE24E813700029F3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D86FBDD24E813700029F3FC /* Assets.xcassets */; };
+		0D86FBE124E813700029F3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D86FBDF24E813700029F3FC /* Main.storyboard */; };
+		0D86FBED24E813700029F3FC /* Deca5__Older_Macs_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBEC24E813700029F3FC /* Deca5__Older_Macs_Tests.swift */; };
+		0D86FBF824E813700029F3FC /* Deca5__Older_Macs_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBF724E813700029F3FC /* Deca5__Older_Macs_UITests.swift */; };
 		0D8B6C8924DDFBE7008F8289 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
 		0D8B6C8B24DE208E008F8289 /* Boot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B6C8A24DE208E008F8289 /* Boot.swift */; };
 		0D99528A24DB2DCA00A7962C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99528924DB2DCA00A7962C /* Loader.swift */; };
@@ -45,6 +51,35 @@
 		0DBCFB8124D3077000E1CC97 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBCFB8024D3077000E1CC97 /* Functions.swift */; };
 		0DBCFB8424D30EF600E1CC97 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0DBCFB8324D30EF600E1CC97 /* ZIPFoundation */; };
 		0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */; };
+		0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; };
+		0DDEFA5224E81404005D51D2 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
+		0DDEFA5324E81404005D51D2 /* libfragmentzip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */; };
+		0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */; };
+		0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84024D9D75400A57154 /* libcrypto.dylib */; };
+		0DDEFA5624E81404005D51D2 /* libirecovery.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83E24D9D75400A57154 /* libirecovery.dylib */; };
+		0DDEFA5724E81404005D51D2 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
+		0DDEFA5824E81404005D51D2 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */; };
+		0DDEFA5924E81404005D51D2 /* libplist.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83F24D9D75400A57154 /* libplist.dylib */; };
+		0DDEFA5A24E81404005D51D2 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84224D9D75400A57154 /* libssl.dylib */; };
+		0DDEFA5B24E81404005D51D2 /* libusbmuxd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */; };
+		0DDEFA5C24E81404005D51D2 /* libzip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84124D9D75400A57154 /* libzip.dylib */; };
+		0DDEFA5D24E81468005D51D2 /* libprerestore.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D6DE85D24D9EE3000A57154 /* libprerestore.c */; };
+		0DDEFA5F24E81499005D51D2 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDEFA5E24E81499005D51D2 /* ZIPFoundation */; };
+		0DDEFA6124E817EA005D51D2 /* Functions_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFA6024E817EA005D51D2 /* Functions_Old.swift */; };
+		0DDEFA6724E850A3005D51D2 /* Restore_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFA6624E850A3005D51D2 /* Restore_Old.swift */; };
+		0DF9AB4D24E89E2300F94476 /* Boot_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9AB4C24E89E2300F94476 /* Boot_Old.swift */; };
+		0DF9AB5024E95E3800F94476 /* SYFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9AB4E24E95E3700F94476 /* SYFlatButton.m */; };
+		0DF9AB5224E9BD5C00F94476 /* MazzardM-Medium.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DBCFB7D24D2043C00E1CC97 /* MazzardM-Medium.otf */; };
+		0DF9AB5324E9BD5C00F94476 /* MazzardM-Bold.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DBCFB7324D09E3A00E1CC97 /* MazzardM-Bold.otf */; };
+		0DF9AB5424E9DA1300F94476 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE84024D9D75400A57154 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5624E9DA1400F94476 /* libcurl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5724E9DA1500F94476 /* libfragmentzip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5824E9DA1600F94476 /* libimobiledevice.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5924E9DA1700F94476 /* libirecovery.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83E24D9D75400A57154 /* libirecovery.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5A24E9DA1800F94476 /* libplist.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83F24D9D75400A57154 /* libplist.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5B24E9DA1A00F94476 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE84224D9D75400A57154 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5C24E9DA1B00F94476 /* libusbmuxd.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DF9AB5D24E9DA1D00F94476 /* libzip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DE84124D9D75400A57154 /* libzip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +97,20 @@
 			remoteGlobalIDString = 0D62600424CE254800330F97;
 			remoteInfo = Deca5;
 		};
+		0D86FBE924E813700029F3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D625FFD24CE254800330F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D86FBD624E8136D0029F3FC;
+			remoteInfo = "Deca5 (Older Macs)";
+		};
+		0D86FBF424E813700029F3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D625FFD24CE254800330F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D86FBD624E8136D0029F3FC;
+			remoteInfo = "Deca5 (Older Macs)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,7 +122,7 @@
 			files = (
 				0D6DE84E24D9D76100A57154 /* libirecovery.dylib in Embed Libraries */,
 				0D6DE85224D9D76700A57154 /* libzip.dylib in Embed Libraries */,
-				0D6DE85524D9D78D00A57154 /* libcurl.dylib in Embed Libraries */,
+				0D6FD25524DF6B590093BB8D /* libcurl.dylib in Embed Libraries */,
 				0D6DE85124D9D76600A57154 /* libusbmuxd.dylib in Embed Libraries */,
 				0D6DE84D24D9D76000A57154 /* libimobiledevice.dylib in Embed Libraries */,
 				0D6DE84B24D9D75D00A57154 /* libcrypto.dylib in Embed Libraries */,
@@ -95,10 +144,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0DF9AB5124E9BD4E00F94476 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				0DF9AB5224E9BD5C00F94476 /* MazzardM-Medium.otf in CopyFiles */,
+				0DF9AB5324E9BD5C00F94476 /* MazzardM-Bold.otf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DF9AB5524E9DA1300F94476 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0DF9AB5924E9DA1700F94476 /* libirecovery.dylib in Embed Libraries */,
+				0DF9AB5D24E9DA1D00F94476 /* libzip.dylib in Embed Libraries */,
+				0DF9AB5C24E9DA1B00F94476 /* libusbmuxd.dylib in Embed Libraries */,
+				0DF9AB5824E9DA1600F94476 /* libimobiledevice.dylib in Embed Libraries */,
+				0DF9AB5624E9DA1400F94476 /* libcurl.dylib in Embed Libraries */,
+				0DF9AB5424E9DA1300F94476 /* libcrypto.dylib in Embed Libraries */,
+				0DF9AB5724E9DA1500F94476 /* libfragmentzip.dylib in Embed Libraries */,
+				0DF9AB5B24E9DA1A00F94476 /* libssl.dylib in Embed Libraries */,
+				0DF9AB5A24E9DA1800F94476 /* libplist.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D5642AC24DF19DE005F4505 /* libidevicerestore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidevicerestore.a; sourceTree = "<group>"; };
+		0D0EA82324E0437C005C0DBF /* libidevicerestore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidevicerestore.a; sourceTree = "<group>"; };
 		0D62600524CE254800330F97 /* Deca5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deca5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62600824CE254800330F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D62600A24CE254800330F97 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -121,9 +200,22 @@
 		0D6DE84024D9D75400A57154 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
 		0D6DE84124D9D75400A57154 /* libzip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzip.dylib; sourceTree = "<group>"; };
 		0D6DE84224D9D75400A57154 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.dylib; sourceTree = "<group>"; };
-		0D6DE85324D9D78A00A57154 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = "<group>"; };
 		0D6DE85C24D9EE3000A57154 /* libprerestore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libprerestore.h; sourceTree = "<group>"; };
 		0D6DE85D24D9EE3000A57154 /* libprerestore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libprerestore.c; sourceTree = "<group>"; };
+		0D6FD25324DF6B500093BB8D /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = "<group>"; };
+		0D86FBD724E8136D0029F3FC /* Deca5 (Older Macs).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deca5 (Older Macs).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D86FBD924E8136D0029F3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D86FBDB24E8136D0029F3FC /* Home_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Old.swift; sourceTree = "<group>"; };
+		0D86FBDD24E813700029F3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D86FBE024E813700029F3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D86FBE224E813700029F3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D86FBE324E813700029F3FC /* Deca5__Older_Macs_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Deca5__Older_Macs_.entitlements; sourceTree = "<group>"; };
+		0D86FBE824E813700029F3FC /* Deca5 (Older Macs)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deca5 (Older Macs)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D86FBEC24E813700029F3FC /* Deca5__Older_Macs_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deca5__Older_Macs_Tests.swift; sourceTree = "<group>"; };
+		0D86FBEE24E813700029F3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D86FBF324E813700029F3FC /* Deca5 (Older Macs)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deca5 (Older Macs)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D86FBF724E813700029F3FC /* Deca5__Older_Macs_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deca5__Older_Macs_UITests.swift; sourceTree = "<group>"; };
+		0D86FBF924E813700029F3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiboot32patcher.a; sourceTree = "<group>"; };
 		0D8B6C8A24DE208E008F8289 /* Boot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boot.swift; sourceTree = "<group>"; };
 		0D99528924DB2DCA00A7962C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -135,6 +227,11 @@
 		0DBCFD2624D380C100E1CC97 /* Deca5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deca5-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DBCFD2724D380C200E1CC97 /* crossover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crossover.h; sourceTree = "<group>"; };
 		0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxpwntool.a; sourceTree = "<group>"; };
+		0DDEFA6024E817EA005D51D2 /* Functions_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions_Old.swift; sourceTree = "<group>"; };
+		0DDEFA6624E850A3005D51D2 /* Restore_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restore_Old.swift; sourceTree = "<group>"; };
+		0DF9AB4C24E89E2300F94476 /* Boot_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boot_Old.swift; sourceTree = "<group>"; };
+		0DF9AB4E24E95E3700F94476 /* SYFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFlatButton.m; sourceTree = "<group>"; };
+		0DF9AB4F24E95E3800F94476 /* SYFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFlatButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +239,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5642AD24DF19DE005F4505 /* libidevicerestore.a in Frameworks */,
-				0D6DE85424D9D78A00A57154 /* libcurl.dylib in Frameworks */,
+				0D0EA82424E0437C005C0DBF /* libidevicerestore.a in Frameworks */,
 				0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */,
 				0D8B6C8924DDFBE7008F8289 /* libiboot32patcher.a in Frameworks */,
 				0D6DE84624D9D75400A57154 /* libirecovery.dylib in Frameworks */,
+				0D6FD25424DF6B500093BB8D /* libcurl.dylib in Frameworks */,
 				0D56427E24DE348F005F4505 /* libiboot32patcher.a in Frameworks */,
 				0D6DE84524D9D75400A57154 /* libimobiledevice.dylib in Frameworks */,
 				0D6DE84824D9D75400A57154 /* libcrypto.dylib in Frameworks */,
@@ -173,6 +270,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D86FBD424E8136D0029F3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */,
+				0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */,
+				0DDEFA5224E81404005D51D2 /* libidevicerestore.a in Frameworks */,
+				0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */,
+				0DDEFA5C24E81404005D51D2 /* libzip.dylib in Frameworks */,
+				0DDEFA5724E81404005D51D2 /* libiboot32patcher.a in Frameworks */,
+				0DDEFA5924E81404005D51D2 /* libplist.dylib in Frameworks */,
+				0DDEFA5324E81404005D51D2 /* libfragmentzip.dylib in Frameworks */,
+				0DDEFA5824E81404005D51D2 /* libxpwntool.a in Frameworks */,
+				0DDEFA5B24E81404005D51D2 /* libusbmuxd.dylib in Frameworks */,
+				0DDEFA5624E81404005D51D2 /* libirecovery.dylib in Frameworks */,
+				0DDEFA5F24E81499005D51D2 /* ZIPFoundation in Frameworks */,
+				0DDEFA5A24E81404005D51D2 /* libssl.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBE524E813700029F3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBF024E813700029F3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -182,6 +313,9 @@
 				0D62600724CE254800330F97 /* Deca5 */,
 				0D62601D24CE254A00330F97 /* Deca5Tests */,
 				0D62602824CE254A00330F97 /* Deca5UITests */,
+				0D86FBD824E8136D0029F3FC /* Deca5 (Older Macs) */,
+				0D86FBEB24E813700029F3FC /* Deca5 (Older Macs)Tests */,
+				0D86FBF624E813700029F3FC /* Deca5 (Older Macs)UITests */,
 				0D62600624CE254800330F97 /* Products */,
 				0D6DE77524D9C77200A57154 /* Frameworks */,
 			);
@@ -193,6 +327,9 @@
 				0D62600524CE254800330F97 /* Deca5.app */,
 				0D62601A24CE254A00330F97 /* Deca5Tests.xctest */,
 				0D62602524CE254A00330F97 /* Deca5UITests.xctest */,
+				0D86FBD724E8136D0029F3FC /* Deca5 (Older Macs).app */,
+				0D86FBE824E813700029F3FC /* Deca5 (Older Macs)Tests.xctest */,
+				0D86FBF324E813700029F3FC /* Deca5 (Older Macs)UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,8 +380,8 @@
 			children = (
 				0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */,
 				0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */,
-				0D5642AC24DF19DE005F4505 /* libidevicerestore.a */,
-				0D6DE85324D9D78A00A57154 /* libcurl.dylib */,
+				0D0EA82324E0437C005C0DBF /* libidevicerestore.a */,
+				0D6FD25324DF6B500093BB8D /* libcurl.dylib */,
 				0D6DE84024D9D75400A57154 /* libcrypto.dylib */,
 				0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */,
 				0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */,
@@ -255,6 +392,42 @@
 				0D6DE84124D9D75400A57154 /* libzip.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D86FBD824E8136D0029F3FC /* Deca5 (Older Macs) */ = {
+			isa = PBXGroup;
+			children = (
+				0DF9AB4F24E95E3800F94476 /* SYFlatButton.h */,
+				0DF9AB4E24E95E3700F94476 /* SYFlatButton.m */,
+				0D86FBD924E8136D0029F3FC /* AppDelegate.swift */,
+				0D86FBDB24E8136D0029F3FC /* Home_Old.swift */,
+				0DDEFA6624E850A3005D51D2 /* Restore_Old.swift */,
+				0DF9AB4C24E89E2300F94476 /* Boot_Old.swift */,
+				0DDEFA6024E817EA005D51D2 /* Functions_Old.swift */,
+				0D86FBDD24E813700029F3FC /* Assets.xcassets */,
+				0D86FBDF24E813700029F3FC /* Main.storyboard */,
+				0D86FBE224E813700029F3FC /* Info.plist */,
+				0D86FBE324E813700029F3FC /* Deca5__Older_Macs_.entitlements */,
+			);
+			path = "Deca5 (Older Macs)";
+			sourceTree = "<group>";
+		};
+		0D86FBEB24E813700029F3FC /* Deca5 (Older Macs)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0D86FBEC24E813700029F3FC /* Deca5__Older_Macs_Tests.swift */,
+				0D86FBEE24E813700029F3FC /* Info.plist */,
+			);
+			path = "Deca5 (Older Macs)Tests";
+			sourceTree = "<group>";
+		};
+		0D86FBF624E813700029F3FC /* Deca5 (Older Macs)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				0D86FBF724E813700029F3FC /* Deca5__Older_Macs_UITests.swift */,
+				0D86FBF924E813700029F3FC /* Info.plist */,
+			);
+			path = "Deca5 (Older Macs)UITests";
 			sourceTree = "<group>";
 		};
 		0DBCFB7224D09DA200E1CC97 /* Fonts */ = {
@@ -360,6 +533,64 @@
 			productReference = 0D62602524CE254A00330F97 /* Deca5UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0D86FBD624E8136D0029F3FC /* Deca5 (Older Macs) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D86FBFA24E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)" */;
+			buildPhases = (
+				0D86FBD324E8136D0029F3FC /* Sources */,
+				0D86FBD424E8136D0029F3FC /* Frameworks */,
+				0D86FBD524E8136D0029F3FC /* Resources */,
+				0DF9AB5124E9BD4E00F94476 /* CopyFiles */,
+				0DF9AB5524E9DA1300F94476 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Deca5 (Older Macs)";
+			packageProductDependencies = (
+				0DDEFA5E24E81499005D51D2 /* ZIPFoundation */,
+			);
+			productName = "Deca5 (Older Macs)";
+			productReference = 0D86FBD724E8136D0029F3FC /* Deca5 (Older Macs).app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D86FBE724E813700029F3FC /* Deca5 (Older Macs)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D86FBFD24E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)Tests" */;
+			buildPhases = (
+				0D86FBE424E813700029F3FC /* Sources */,
+				0D86FBE524E813700029F3FC /* Frameworks */,
+				0D86FBE624E813700029F3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D86FBEA24E813700029F3FC /* PBXTargetDependency */,
+			);
+			name = "Deca5 (Older Macs)Tests";
+			productName = "Deca5 (Older Macs)Tests";
+			productReference = 0D86FBE824E813700029F3FC /* Deca5 (Older Macs)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0D86FBF224E813700029F3FC /* Deca5 (Older Macs)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D86FC0024E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)UITests" */;
+			buildPhases = (
+				0D86FBEF24E813700029F3FC /* Sources */,
+				0D86FBF024E813700029F3FC /* Frameworks */,
+				0D86FBF124E813700029F3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D86FBF524E813700029F3FC /* PBXTargetDependency */,
+			);
+			name = "Deca5 (Older Macs)UITests";
+			productName = "Deca5 (Older Macs)UITests";
+			productReference = 0D86FBF324E813700029F3FC /* Deca5 (Older Macs)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -380,6 +611,17 @@
 					0D62602424CE254A00330F97 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 0D62600424CE254800330F97;
+					};
+					0D86FBD624E8136D0029F3FC = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					0D86FBE724E813700029F3FC = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 0D86FBD624E8136D0029F3FC;
+					};
+					0D86FBF224E813700029F3FC = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 0D86FBD624E8136D0029F3FC;
 					};
 				};
 			};
@@ -402,6 +644,9 @@
 				0D62600424CE254800330F97 /* Deca5 */,
 				0D62601924CE254A00330F97 /* Deca5Tests */,
 				0D62602424CE254A00330F97 /* Deca5UITests */,
+				0D86FBD624E8136D0029F3FC /* Deca5 (Older Macs) */,
+				0D86FBE724E813700029F3FC /* Deca5 (Older Macs)Tests */,
+				0D86FBF224E813700029F3FC /* Deca5 (Older Macs)UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -425,6 +670,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0D62602324CE254A00330F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBD524E8136D0029F3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D86FBDE24E813700029F3FC /* Assets.xcassets in Resources */,
+				0D86FBE124E813700029F3FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBE624E813700029F3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBF124E813700029F3FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -465,6 +733,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0D86FBD324E8136D0029F3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDEFA6724E850A3005D51D2 /* Restore_Old.swift in Sources */,
+				0DF9AB4D24E89E2300F94476 /* Boot_Old.swift in Sources */,
+				0D86FBDC24E8136D0029F3FC /* Home_Old.swift in Sources */,
+				0DF9AB5024E95E3800F94476 /* SYFlatButton.m in Sources */,
+				0DDEFA5D24E81468005D51D2 /* libprerestore.c in Sources */,
+				0D86FBDA24E8136D0029F3FC /* AppDelegate.swift in Sources */,
+				0DDEFA6124E817EA005D51D2 /* Functions_Old.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBE424E813700029F3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D86FBED24E813700029F3FC /* Deca5__Older_Macs_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D86FBEF24E813700029F3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D86FBF824E813700029F3FC /* Deca5__Older_Macs_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -478,6 +776,16 @@
 			target = 0D62600424CE254800330F97 /* Deca5 */;
 			targetProxy = 0D62602624CE254A00330F97 /* PBXContainerItemProxy */;
 		};
+		0D86FBEA24E813700029F3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D86FBD624E8136D0029F3FC /* Deca5 (Older Macs) */;
+			targetProxy = 0D86FBE924E813700029F3FC /* PBXContainerItemProxy */;
+		};
+		0D86FBF524E813700029F3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D86FBD624E8136D0029F3FC /* Deca5 (Older Macs) */;
+			targetProxy = 0D86FBF424E813700029F3FC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -485,6 +793,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				0D62601224CE254A00330F97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0D86FBDF24E813700029F3FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D86FBE024E813700029F3FC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -545,7 +861,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -614,7 +930,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -641,9 +957,9 @@
 				CODE_SIGN_ENTITLEMENTS = Deca5/Deca5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Deca5/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
@@ -658,6 +974,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				"OTHER_CFLAGS[arch=*]" = "";
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = (
@@ -682,9 +999,9 @@
 				CODE_SIGN_ENTITLEMENTS = Deca5/Deca5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Deca5/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
@@ -699,6 +1016,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				"OTHER_CFLAGS[arch=*]" = "";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-L/usr/local/lib",
@@ -796,6 +1114,154 @@
 			};
 			name = Release;
 		};
+		0D86FBFB24E813700029F3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Deca5 (Older Macs)/Deca5__Older_Macs_.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Deca5 (Older Macs)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Deca5/Functions/Deca5-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0D86FBFC24E813700029F3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Deca5 (Older Macs)/Deca5__Older_Macs_.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Deca5 (Older Macs)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Deca5/Functions/Deca5-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0D86FBFE24E813700029F3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				INFOPLIST_FILE = "Deca5 (Older Macs)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deca5 (Older Macs).app/Contents/MacOS/Deca5 (Older Macs)";
+			};
+			name = Debug;
+		};
+		0D86FBFF24E813700029F3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				INFOPLIST_FILE = "Deca5 (Older Macs)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deca5 (Older Macs).app/Contents/MacOS/Deca5 (Older Macs)";
+			};
+			name = Release;
+		};
+		0D86FC0124E813700029F3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				INFOPLIST_FILE = "Deca5 (Older Macs)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Deca5 (Older Macs)";
+			};
+			name = Debug;
+		};
+		0D86FC0224E813700029F3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJG9SCLDH;
+				INFOPLIST_FILE = "Deca5 (Older Macs)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Deca5 (Older Macs)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -835,6 +1301,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0D86FBFA24E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D86FBFB24E813700029F3FC /* Debug */,
+				0D86FBFC24E813700029F3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D86FBFD24E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D86FBFE24E813700029F3FC /* Debug */,
+				0D86FBFF24E813700029F3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D86FC0024E813700029F3FC /* Build configuration list for PBXNativeTarget "Deca5 (Older Macs)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D86FC0124E813700029F3FC /* Debug */,
+				0D86FC0224E813700029F3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -850,6 +1343,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		0DBCFB8324D30EF600E1CC97 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DBCFB8224D30EF600E1CC97 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		0DDEFA5E24E81499005D51D2 /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DBCFB8224D30EF600E1CC97 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;

@@ -2,8 +2,6 @@
 //  libprerestore.h
 //  Deca5
 //
-//  Created by Zane Kleinberg on 8/4/20.
-//
 
 #ifndef libprerestore_h
 #define libprerestore_h

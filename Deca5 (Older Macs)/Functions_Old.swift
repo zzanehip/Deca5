@@ -1,27 +1,21 @@
 //
-//  Functions.swift
-//  Deca5
+//  Functions_Old.swift
+//  Deca5 (Older Macs)
 //
 //
 
 import Foundation
-import SwiftUI
+import Cocoa
 import ZIPFoundation
-import Combine
 
-// 1. Get IPSW path
-// 2. Get Application Support path
-// 3. Extract Build Manifest
-// 4. Get component path in Build Manifest and extract.
-// 5. Decrypt Component
-// 6. Patch Component
-// 7. Repeat
-// 8.
-
+var update_label:((String)->())?
+func updatetest() {
+    update_label?("Test")
+    
+}
 
 func selectIPSW() {
     let dialog = NSOpenPanel();
-    let model = sendModel.sharedInstance
     dialog.title                   = "Select IPSW for restore";
     dialog.showsResizeIndicator    = true;
     dialog.showsHiddenFiles        = false;
@@ -36,25 +30,24 @@ func selectIPSW() {
             let path: String = result!.path
             print(path)
             restore_processing_main(ipsw_path: result!)
-            model.ipsw_path = result!
+            sendModel.ipsw_path = result!
         }
         
     } else {
-        model.prep_restore = false
+        sendModel.prep_restore?(false)
         return
     }
 }
 
 func restore_processing_main(ipsw_path: URL) {
     //Begin Process Of Building Components
-    let model = sendModel.sharedInstance
     let group = DispatchGroup()
     group.enter()
     let dispatchQueue = DispatchQueue(label: "Deca5-Process", qos: .background)
     dispatchQueue.async(group: group,  execute: {
         let path = directory_controler()
         print("Got Path")
-        model.callback = "Starting up..."
+        sendModel.callback?("Starting up...")
         do {
             let fileURLs = try FileManager.default.contentsOfDirectory(at: path, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles, .skipsSubdirectoryDescendants])
             for fileURL in fileURLs {
@@ -68,16 +61,16 @@ func restore_processing_main(ipsw_path: URL) {
             print(error)
         }
         print("Entering extract_components")
-        model.callback = "Entering extract_components"
+        sendModel.callback?("Entering extract_components")
         print("Extracting BuildManifest.plist")
-        model.callback = "Extracting BuildManifest.plist"
+        sendModel.callback?("Extracting BuildManifest.plist")
         extract_components(ipsw_path: ipsw_path, as_path: path, file_path: "BuildManifest.plist", type: "BuildManifest.plist")
         print("Getting Info")
         let info = read_manifest_ipsw_info(as_path: path)
         let device = info.0
         let version = info.1
         print(device, version)
-        model.callback = "Identified as \(device) \(version)"
+        sendModel.callback?("Identified as \(device) \(version)")
         get_decrypted_components(component: "iBSS", as_path: path, ipsw_path: ipsw_path, device: device, version: version, should_decrypt: "FALSE")
         iBootPatcher(convert_to_mutable_pointer(value: "\(path.path)/iBSS.decrypted"), convert_to_mutable_pointer(value: "\(path.path)/iBSS.patched"), UnsafeMutablePointer<Int8>(mutating: nil), convert_to_mutable_pointer(value: "TRUE"), convert_to_mutable_pointer(value: "FALSE"), convert_to_mutable_pointer(value: "FALSE"))
         decrypt(convert_to_mutable_pointer(value: "\(path.path)/iBSS.patched"), convert_to_mutable_pointer(value: "\(path.path)/iBSS"), UnsafeMutablePointer<Int8>(mutating: nil), UnsafeMutablePointer<Int8>(mutating: nil), convert_to_mutable_pointer(value: "FALSE"), convert_to_mutable_pointer(value: "\(path.path)/iBSS.extracted"))
@@ -105,9 +98,9 @@ func restore_processing_main(ipsw_path: URL) {
             delete_component(as_path: path, component: component)
         }
         print("Done")
-        model.callback = "Done. You can now restore."
-        model.can_restore = true
-        model.prep_restore = false
+        sendModel.callback?("Done. You can now restore.")
+        sendModel.can_restore?(true)
+        sendModel.prep_restore?(false)
     })
     group.leave()
     group.notify(queue: DispatchQueue.main, execute: {
@@ -135,30 +128,32 @@ func restore_main() -> Int {
         var ret: Int32
         var ecid: String = ""
         var ecid_path: URL
-        let model = sendModel.sharedInstance
         let path = directory_controler()
-        model.callback = ""
-        model.callback = "Finding device..."
+        sendModel.callback?("")
+        sendModel.callback?("Finding device...")
+        sendModel.progress?(100.0)
         ret = get_dev()
         if ret != 0 {
-            model.callback = "Error finding device"
-            model.try_again = true
-            model.try_again_show = true
+            sendModel.callback?("Error finding device")
+            sendModel.try_again = true
+            sendModel.try_again_show?(true)
+            sendModel.progress?(0.0)
             return
         }
-        model.callback = "Retrieving ECID..."
+        sendModel.callback?("Retrieving ECID...")
         ecid = String(cString:send_ecid())
         if ecid == "" {
-            model.callback = "Error retrieving ECID"
-            model.try_again = true
-            model.try_again_show = true
+            sendModel.callback?("Error retrieving ECID")
+            sendModel.try_again = true
+            sendModel.try_again_show?(true)
+            sendModel.progress?(0.0)
             return
         }
         do {
             sleep(2)
         }
-        if !model.try_again {
-            model.callback = "Shuffling files..."
+        if !sendModel.try_again {
+            sendModel.callback?("Shuffling files...")
             ecid_path = create_device_directory(ecid: ecid, as_path: path)
             for component in ["iBSS", "iBEC", "iBEC.boot", "DeviceTree", "RestoreRamDisk", "KernelCache", "BuildManifest.plist", "AppleLogo"] {
                 move_component(as_path: path, ecid_path: ecid_path, component: component)
@@ -168,7 +163,7 @@ func restore_main() -> Int {
             }
         } else {
             if component_exists(as_path: path, component: "iBSS") {
-                model.callback = "Shuffling files..."
+                sendModel.callback?("Shuffling files...")
                 ecid_path = create_device_directory(ecid: ecid, as_path: path)
                 for component in ["iBSS", "iBEC", "iBEC.boot", "DeviceTree", "RestoreRamDisk", "KernelCache", "BuildManifest.plist", "AppleLogo"] {
                     move_component(as_path: path, ecid_path: ecid_path, component: component)
@@ -180,53 +175,51 @@ func restore_main() -> Int {
                 ecid_path = path.appendingPathComponent(ecid, isDirectory: true)
             }
         }
-        model.callback = "Sending iBSS..."
+            
+        sendModel.callback?("Sending iBSS...")
         ret = sendiBSS(convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")))
         if ret != 0 {
-            model.progress = 0.0
-            model.callback = "Error sending iBSS"
-            model.try_again = true
-            model.try_again_show = true
+            sendModel.progress?(0.0)
+            sendModel.callback?("Error sending iBSS")
+            sendModel.try_again = true
+            sendModel.try_again_show?(true)
+            sendModel.progress?(0.0)
             return
         } else {
-            model.progress = 0.0
-            model.callback = "Done Sending iBSS"
+            sendModel.callback?("Done Sending iBSS")
             do {
                 sleep(2)
             }
         }
-        model.callback = "Sending iBEC..."
+        sendModel.callback?("Sending iBEC...")
         ret = sendiBEC(convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC")))
         if ret != 0 {
-            model.progress = 0.0
-            model.callback = "Error sending iBEC"
-            model.try_again = true
-            model.try_again_show = true
+            sendModel.progress?(0.0)
+            sendModel.callback?("Error sending iBEC")
+            sendModel.try_again = true
+            sendModel.try_again_show?(true)
             return
         } else {
-            model.progress = 0.0
-            model.callback = "Done Sending iBEC"
+            sendModel.callback?("Done Sending iBEC")
             do {
                 sleep(2)
             }
         }
-        model.progress = 0.0
-        model.callback = "Preparing to restoring device..."
-        ret = deca5restore(convert_to_mutable_pointer(value: model.ipsw_path.path), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "DeviceTree")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "RestoreRamDisk")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "KernelCache")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "AppleLogo")))
+        sendModel.callback?("Preparing to restoring device...")
+        ret = deca5restore(convert_to_mutable_pointer(value: sendModel.ipsw_path?.path ?? ""), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "DeviceTree")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "RestoreRamDisk")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "KernelCache")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "AppleLogo")))
         if ret != 0 {
-            model.progress = 0.0
+            sendModel.progress?(0.0)
             print("Error Restoring...")
-            model.try_again = true
-            model.try_again_show = true
-            // model.callback = "Error Restoring"
+            sendModel.try_again = true
+            sendModel.try_again_show?(true)
+            sendModel.callback?("Error Restoring")
             return
         }
-        model.callback = "Successfully restored device"
+        sendModel.callback?("Successfully restored device")
+        sendModel.restore_done?(true)
     })
     group.leave()
     group.notify(queue: DispatchQueue.main, execute: {
-        let model = sendModel.sharedInstance
-        model.restore_done = true
         print("Finished")
     })
     return 0
@@ -253,21 +246,20 @@ func boot_main() -> Int {
         var ecid: String = ""
         var mode: String = ""
         var ecid_path: URL
-        let model = sendModel.sharedInstance
         let path = directory_controler()
-        model.callback = ""
-        model.callback = "Finding device..."
+        sendModel.callback?("Finding device...")
+        sendModel.progress?(100.0)
         ret = get_dev()
         if ret != 0 {
-            model.callback = "Error finding device"
-            model.try_again_show = true
+           sendModel.callback?("Error finding device")
+            sendModel.try_again_show?(true)
             return
         }
-        model.callback = "Retrieving ECID..."
+       sendModel.callback?("Retrieving ECID...")
         ecid = String(cString:send_ecid())
         if ecid == "" {
-            model.callback = "Error retrieving ECID"
-            model.try_again_show = true
+           sendModel.callback?("Error retrieving ECID")
+        sendModel.try_again_show?(true)
             return
         }
         do {
@@ -275,59 +267,57 @@ func boot_main() -> Int {
         }
         ecid_path = path.appendingPathComponent(ecid, isDirectory: true)
         if !component_exists(as_path: ecid_path, component: "iBSS") {
-            model.callback = "No boot components for device"
-            model.try_again_show = true
+           sendModel.callback?("No boot components for device")
+        sendModel.try_again_show?(true)
             return
         }
-        model.callback = "Sending preboot iBSS..."
+       sendModel.callback?("Sending preboot iBSS...")
        ret = sendiBSS(convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")))
         if ret != 0 {
-            model.progress = 0.0
-            model.callback = "Error sending preboot iBSS"
-            model.try_again_show = true
+            sendModel.progress?(0.0)
+           sendModel.callback?("Error sending preboot iBSS")
+        sendModel.try_again_show?(true)
             return
         } else {
-            model.progress = 0.0
-            model.callback = "Done sending preboot iBSS"
+           sendModel.callback?("Done sending preboot iBSS")
             do {
                 sleep(2)
             }
         }
-        model.callback = "Sending preboot iBEC..."
+       sendModel.callback?("Sending preboot iBEC...")
        ret = sendiBEC(convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC.boot")))
         if ret != 0 {
-            model.progress = 0.0
-            model.callback = "Error sending preboot iBEC"
-            model.try_again_show = true
+            sendModel.progress?(0.0)
+           sendModel.callback?("Error sending preboot iBEC")
+        sendModel.try_again_show?(true)
             return
         } else {
-            model.progress = 0.0
-            model.callback = "Done sending preboot iBEC"
+           sendModel.callback?("Done sending preboot iBEC")
             do {
                 sleep(6)
             }
         }
-        model.callback = "Booting.."
+       sendModel.callback?("Booting..")
         //This is soooo hacky but it works...
         ret = deca5boot(convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC.boot")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "DeviceTree")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "RestoreRamDisk")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "KernelCache")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "BuildManifest.plist")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "AppleLogo")))
         if ret != 0 {
-            model.progress = 0.0
-            model.callback = "Error Booting"
-            model.try_again_show = true
+            sendModel.progress?(0.0)
+           sendModel.callback?("Error Booting")
+        sendModel.try_again_show?(true)
             return
         }
-        model.callback = "Successfully booted device"
-        model.progress = 100.0
+       sendModel.callback?("Successfully booted device")
+       sendModel.boot_done?(true)
         
     })
     group.leave()
     group.notify(queue: DispatchQueue.main, execute: {
-        let model = sendModel.sharedInstance
-        model.boot_device = false
         print("Finished")
     })
     return 0
 }
+    
+
 
 func directory_controler() -> URL {
     var as_path: URL!
@@ -510,7 +500,6 @@ func get_decrypted_components(component: String, as_path: URL, ipsw_path: URL, d
     var key:String = ""
     var iv:String = ""
     let group = DispatchGroup()
-    let model = sendModel.sharedInstance
     print("Entering \(component)")
     print("Getting  \(component) Path")
     let path = read_manifest_value(as_path: as_path, component: component)
@@ -519,10 +508,10 @@ func get_decrypted_components(component: String, as_path: URL, ipsw_path: URL, d
         return
     }
     print("Extracting \(component)...")
-    model.callback = "Extracting \(component)..."
+    sendModel.callback?("Extracting \(component)...")
     extract_components(ipsw_path: ipsw_path, as_path: as_path, file_path: path, type: component)
     print("Fetching Key/IV Pair")
-    model.callback = "Fetching Key/IV Pair..."
+    sendModel.callback?("Fetching Key/IV Pair...")
     key = ""
     iv = ""
     group.enter()
@@ -552,53 +541,36 @@ func get_decrypted_components(component: String, as_path: URL, ipsw_path: URL, d
     group.wait()
     if component != "RestoreRamDisk" || component != "AppleLogo" || component != "KernelCache" || component != "DeviceTree" {
         print("Decrypting \(component)")
-        model.callback = "Decrypting \(component)"
+        sendModel.callback?("Decrypting \(component)")
         if component == "iBSS" || component == "iBEC" {
             decrypt(convert_to_mutable_pointer(value: "\(as_path.path)/\(component).extracted"), convert_to_mutable_pointer(value: "\(as_path.path)/\(component).decrypted"), convert_to_mutable_pointer(value: key), convert_to_mutable_pointer(value: iv), convert_to_mutable_pointer(value: should_decrypt), UnsafeMutablePointer<Int8>(mutating: nil))
         }
     }
 }
 
+struct sendModel {
+    static var ipsw_path = URL(string:"file://")
+    static var callback:((String)->())?
+    static var progress:((Double)->())?
+    static var restore_processes:((Bool)->())?
+    static var try_again: Bool = false
+    static var try_again_show:((Bool)->())?
+    static var restore_done:((Bool)->())?
+    static var prep_restore:((Bool)->())?
+    static var can_restore:((Bool)->())?
+    static var boot_done:((Bool)->())?
+
+}
 
 func send_output_to_swift(modifier: UnsafePointer<CChar>) {
     print(String(cString: modifier))
-    let model = sendModel.sharedInstance
     DispatchQueue.main.async {
-        model.callback = String(cString: modifier)
+        sendModel.callback?(String(cString: modifier))
     }
 }
 
 func send_output_progress_to_swift(modifier: Double) {
-    let model = sendModel.sharedInstance
     DispatchQueue.main.async {
-        model.progress = modifier
+        sendModel.progress?(modifier)
     }
-}
-
-func reset_model() {
-    let model = sendModel.sharedInstance
-    model.callback = ""
-    model.progress = 0.0
-    model.restore_processes = false
-    model.ipsw_path = URL(string:"file://")!
-    model.try_again = false
-    model.try_again_show = false
-    model.restore_done = false
-    model.prep_restore = false
-    model.can_restore = false
-    model.boot_device = false
-}
-
-class sendModel: ObservableObject {
-    static let sharedInstance = sendModel()
-    @Published var callback: String = " "
-    @Published var progress: Double = 0.0
-    @Published var restore_processes: Bool = false
-    @Published var ipsw_path: URL = URL(string:"file://")!
-    @Published var try_again: Bool = false
-    @Published var try_again_show: Bool = false
-    @Published var restore_done: Bool = false
-    @Published var prep_restore: Bool = false
-    @Published var can_restore: Bool = false
-    @Published var boot_device: Bool = false
 }

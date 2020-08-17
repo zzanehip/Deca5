@@ -2,8 +2,7 @@
 //  loader.swift
 //  Deca5
 //
-//  Created by Zane Kleinberg on 8/5/20.
-//
+
 
 import SwiftUI
 

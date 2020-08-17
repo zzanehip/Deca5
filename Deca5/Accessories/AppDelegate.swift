@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Deca5
 //
-//  Created by Zane Kleinberg on 7/26/20.
-//
+
 
 import Cocoa
 import SwiftUI
@@ -26,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        window.title = "Deca5"
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

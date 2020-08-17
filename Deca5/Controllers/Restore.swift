@@ -37,7 +37,7 @@ struct Restore: View {
                                     Circle().frame(height:60)
                                     Text("1").foregroundColor(Color.white)
                                 }
-                                Text("Select IPSW")
+                                Text("Select IPSW").font(Font.custom("Mazzard M Medium", size: 14))
                             }
                         }.buttonStyle(PlainButtonStyle()).padding(.leading, 160)
                         Button(action: {
@@ -47,7 +47,6 @@ struct Restore: View {
                             self.restore_processes = false
                             ret = restore_main()
                             } else {
-                                self.globalCallback.prep_restore = true
                                 self.globalCallback.callback = "Please select an IPSW first"
                             }
                             }
@@ -57,7 +56,7 @@ struct Restore: View {
                                     Circle().frame(height:60)
                                     Text("2").foregroundColor(Color.white)
                                 }
-                                Text("Restore Device")
+                                Text("Restore Device").font(Font.custom("Mazzard M Medium", size: 14))
                             }
                         }.buttonStyle(PlainButtonStyle()).padding(.trailing, 160)
                     } else {
@@ -69,7 +68,7 @@ struct Restore: View {
                         }
                     }
                 }.padding(.top, 40)
-                if !restore_processes || self.globalCallback.prep_restore || self.globalCallback.can_restore {
+                if !restore_processes || self.globalCallback.prep_restore || self.globalCallback.can_restore || self.globalCallback.callback == "Please select an IPSW first"{
                     Text("\(self.globalCallback.callback)").font(Font.custom("Mazzard M Medium", size: 20)).foregroundColor(Color.init(hex:"707070")).padding(.top, 40)
                 }
                 Spacer()

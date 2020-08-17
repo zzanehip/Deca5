@@ -1,8 +1,6 @@
 //
-//  xpwntool.h
+//  crossover.h
 //  Deca5
-//
-//  Created by Zane Kleinberg on 7/30/20.
 //
 
 #ifndef crossover_h

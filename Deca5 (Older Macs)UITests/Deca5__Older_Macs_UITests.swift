@@ -1,12 +1,12 @@
 //
-//  Deca5UITests.swift
-//  Deca5UITests
+//  Deca5__Older_Macs_UITests.swift
+//  Deca5 (Older Macs)UITests
 //
 
 
 import XCTest
 
-class Deca5UITests: XCTestCase {
+class Deca5__Older_Macs_UITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

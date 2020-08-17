@@ -30,6 +30,7 @@ struct Home: View {
                            Text("Restore").font(Font.custom("Mazzard M Medium", size: 14)).frame(width:80)
                     
                     }.padding(.leading, 260)
+
                     Spacer()
                     Button(action: { self.cScreen.screen = .boot  } ) {
                            Text("Boot").font(Font.custom("Mazzard M Medium", size: 14)).frame(width:80)
