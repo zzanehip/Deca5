@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D0EA82424E0437C005C0DBF /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
+		0D48FD0D24EDCCD30024E344 /* libidevicerestore-old.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */; };
+		0D48FD0E24EDCCDA0024E344 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
 		0D56427E24DE348F005F4505 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
 		0D62600924CE254800330F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600824CE254800330F97 /* AppDelegate.swift */; };
 		0D62600B24CE254800330F97 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600A24CE254800330F97 /* Home.swift */; };
@@ -52,7 +53,6 @@
 		0DBCFB8424D30EF600E1CC97 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0DBCFB8324D30EF600E1CC97 /* ZIPFoundation */; };
 		0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */; };
 		0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; };
-		0DDEFA5224E81404005D51D2 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
 		0DDEFA5324E81404005D51D2 /* libfragmentzip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */; };
 		0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */; };
 		0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84024D9D75400A57154 /* libcrypto.dylib */; };
@@ -178,6 +178,7 @@
 
 /* Begin PBXFileReference section */
 		0D0EA82324E0437C005C0DBF /* libidevicerestore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidevicerestore.a; sourceTree = "<group>"; };
+		0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libidevicerestore-old.a"; sourceTree = "<group>"; };
 		0D62600524CE254800330F97 /* Deca5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deca5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62600824CE254800330F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D62600A24CE254800330F97 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -239,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D0EA82424E0437C005C0DBF /* libidevicerestore.a in Frameworks */,
+				0D48FD0E24EDCCDA0024E344 /* libidevicerestore.a in Frameworks */,
 				0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */,
 				0D8B6C8924DDFBE7008F8289 /* libiboot32patcher.a in Frameworks */,
 				0D6DE84624D9D75400A57154 /* libirecovery.dylib in Frameworks */,
@@ -276,7 +277,7 @@
 			files = (
 				0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */,
 				0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */,
-				0DDEFA5224E81404005D51D2 /* libidevicerestore.a in Frameworks */,
+				0D48FD0D24EDCCD30024E344 /* libidevicerestore-old.a in Frameworks */,
 				0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */,
 				0DDEFA5C24E81404005D51D2 /* libzip.dylib in Frameworks */,
 				0DDEFA5724E81404005D51D2 /* libiboot32patcher.a in Frameworks */,
@@ -381,6 +382,7 @@
 				0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */,
 				0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */,
 				0D0EA82324E0437C005C0DBF /* libidevicerestore.a */,
+				0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */,
 				0D6FD25324DF6B500093BB8D /* libcurl.dylib */,
 				0D6DE84024D9D75400A57154 /* libcrypto.dylib */,
 				0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */,
@@ -974,7 +976,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				"OTHER_CFLAGS[arch=*]" = "";
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = (
@@ -1016,7 +1018,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				"OTHER_CFLAGS[arch=*]" = "";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-L/usr/local/lib",
@@ -1135,7 +1137,13 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lcrypto",
+					"-lz",
+					"-weak_library",
+					/usr/lib/libSystem.B.dylib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Deca5/Functions/Deca5-Bridging-Header.h";
@@ -1164,7 +1172,13 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lcrypto",
+					"-lz",
+					"-weak_library",
+					/usr/lib/libSystem.B.dylib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Deca5--Older-Macs-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Deca5/Functions/Deca5-Bridging-Header.h";

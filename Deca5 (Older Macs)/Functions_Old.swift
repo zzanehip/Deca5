@@ -205,7 +205,7 @@ func restore_main() -> Int {
                 sleep(2)
             }
         }
-        sendModel.callback?("Preparing to restoring device...")
+        sendModel.callback?("Preparing to restore device...")
         ret = deca5restore(convert_to_mutable_pointer(value: sendModel.ipsw_path?.path ?? ""), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBSS")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "iBEC")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "DeviceTree")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "RestoreRamDisk")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "KernelCache")), convert_to_mutable_pointer(value: convert_component_path(ecid_path: ecid_path, component: "AppleLogo")))
         if ret != 0 {
             sendModel.progress?(0.0)
