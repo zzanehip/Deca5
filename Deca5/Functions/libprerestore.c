@@ -14,6 +14,7 @@
 #include <libirecovery.h>
 #include <readline/readline.h>
 #include <readline/history.h>
+#include <libfragmentzip/libfragmentzip.h>
 #include <math.h>
 #include <sys/stat.h>
 
@@ -23,6 +24,7 @@ uint64_t ecid = 0;
 irecv_error_t errors = 0;
 int progress_cb(irecv_client_t client, const irecv_event_t* event);
 void send_progress(double progress);
+void send_progress_fz(unsigned int progress);
 irecv_device_t device = NULL;
 
 
@@ -65,6 +67,20 @@ int progress_cb(irecv_client_t client, const irecv_event_t* event) {
     return 0;
 }
 
+
+int download_component(const char* url, const char* component, const char* outdir) {
+    int ret = 0;
+    fragmentzip_t *remote_ipsw = fragmentzip_open(url);
+    if (!remote_ipsw) {
+        return -1;
+    }
+    ret = fragmentzip_download_file(remote_ipsw, component, outdir, send_progress_fz);
+    fragmentzip_close(remote_ipsw);
+    if (ret != 0) {
+        return -1;
+    }
+    return 0;
+}
 
 int sendiBSS(char *iBSSpath) {
     int ret;
@@ -214,6 +230,17 @@ void send_progress(double progress) {
         progress = 100;
     }
     prog.send_output_progress_to_swift(progress);
+}
+
+
+void send_progress_fz(unsigned int progress) {
+    if(progress < 0) {
+        return;
+    }
+    if(progress > 100) {
+        progress = 100;
+    }
+    prog.send_output_progress_to_swift((double)progress);
 }
 
 

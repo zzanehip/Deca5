@@ -1,12 +1,12 @@
 //
-//  Boot.swift
+//  Jailbreak.swift
 //  Deca5
 //
 //
 
 import SwiftUI
 
-struct Boot: View {
+struct Jailbreak: View {
     @EnvironmentObject var cScreen: currentScreen
     @ObservedObject var globalCallback: sendModel = sendModel.sharedInstance
     @State var percentage:CGFloat = 0
@@ -19,23 +19,23 @@ struct Boot: View {
                     Spacer()
                     VStack(alignment: .trailing) {
                         Text("DECA5").font(Font.custom("Mazzard M Bold", size: 55)).foregroundColor(Color.init(hex:"707070"))
-                        Text("Boot Your Device").font(Font.custom("Mazzard M Bold", size: 40)).foregroundColor(Color.init(hex:"707070"))
+                        Text("Jailbreak Your Device").font(Font.custom("Mazzard M Bold", size: 40)).foregroundColor(Color.init(hex:"707070"))
                     }.padding(.trailing, 20)
                 }.padding(.top, 20)
                 HStack() {
-                    if !self.globalCallback.boot_device && !self.globalCallback.try_again_show && self.globalCallback.callback != "Successfully booted device" {
+                    if !self.globalCallback.boot_device && !self.globalCallback.try_again_show && self.globalCallback.callback != "Successfully booted device...installing Jailbreak" {
                         Spacer()
                         Button(action: {
                                 var ret: Int
                                 self.globalCallback.boot_device = true
-                                ret = boot_main()
+                                ret = jailbreak_main()
                         }) {
                             VStack() {
                                 ZStack {
                                     Circle().frame(height:60)
-                                    Text("B").foregroundColor(Color.white)
+                                    Text("J").foregroundColor(Color.white)
                                 }
-                                Text("Boot Device").font(Font.custom("Mazzard M Medium", size: 14))
+                                Text("Jailbreak Device").font(Font.custom("Mazzard M Medium", size: 14))
                             }
                         }.buttonStyle(PlainButtonStyle())
                         Spacer()
@@ -48,7 +48,7 @@ struct Boot: View {
                         }
                     }
                 }.padding(.top, 40)
-                if  self.globalCallback.boot_device || self.globalCallback.try_again_show || self.globalCallback.callback == "Successfully booted device" {
+                if  self.globalCallback.boot_device || self.globalCallback.try_again_show || self.globalCallback.callback == "Successfully booted device...installing Jailbreak" {
                     Text("\(self.globalCallback.callback)").font(Font.custom("Mazzard M Medium", size: 20)).foregroundColor(Color.init(hex:"707070")).padding(.top, 40)
                 }
                 Spacer()
@@ -64,7 +64,7 @@ struct Boot: View {
                             var ret: Int = 1
                             self.globalCallback.try_again_show = false
                             self.globalCallback.boot_device = true
-                            ret = boot_main()
+                            ret = jailbreak_main()
                         }) {
                             Text("Try Again?").font(Font.custom("Mazzard M Bold", size: 25)).foregroundColor(Color.init(hex:"707070")).padding(.leading, 0)
                         }.buttonStyle(PlainButtonStyle()).padding(.leading, 0).padding(.trailing, 108)

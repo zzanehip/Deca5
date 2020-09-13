@@ -16,6 +16,7 @@ struct ViewCoordinator: View {
         case .home: return AnyView(Home())
         case .restore: return AnyView(Restore())
         case .boot: return AnyView(Boot())
+        case .jailbreak: return AnyView(Jailbreak())
         }
     }
 }
@@ -32,7 +33,7 @@ class currentScreen: ObservableObject {
         case home
         case restore
         case boot
-       // case jailbreak
+        case jailbreak
     
     }
     

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D48FD0D24EDCCD30024E344 /* libidevicerestore-old.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */; };
-		0D48FD0E24EDCCDA0024E344 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0EA82324E0437C005C0DBF /* libidevicerestore.a */; };
-		0D56427E24DE348F005F4505 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
 		0D62600924CE254800330F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600824CE254800330F97 /* AppDelegate.swift */; };
 		0D62600B24CE254800330F97 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62600A24CE254800330F97 /* Home.swift */; };
 		0D62600D24CE254A00330F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D62600C24CE254A00330F97 /* Assets.xcassets */; };
@@ -17,6 +14,19 @@
 		0D62601324CE254A00330F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D62601124CE254A00330F97 /* Main.storyboard */; };
 		0D62601F24CE254A00330F97 /* Deca5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62601E24CE254A00330F97 /* Deca5Tests.swift */; };
 		0D62602A24CE254A00330F97 /* Deca5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62602924CE254A00330F97 /* Deca5UITests.swift */; };
+		0D6A26FA24FC1272008B400C /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6A26F924FC1272008B400C /* libiboot32patcher.a */; };
+		0D6A26FB24FC1272008B400C /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6A26F924FC1272008B400C /* libiboot32patcher.a */; };
+		0D6DCBBE250C2FE300338E28 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBBD250C2FE300338E28 /* libidevicerestore.a */; };
+		0D6DCBDB250D444400338E28 /* liblzss.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBDA250D444400338E28 /* liblzss.dylib */; };
+		0D6DCBDC250D444400338E28 /* liblzss.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBDA250D444400338E28 /* liblzss.dylib */; };
+		0D6DCBDD250D444E00338E28 /* liblzss.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DCBDA250D444400338E28 /* liblzss.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0D6DCBDE250D445100338E28 /* liblzss.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0D6DCBDA250D444400338E28 /* liblzss.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0D6DCBE0250D4A7D00338E28 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBDF250D4A7D00338E28 /* libxpwntool.a */; };
+		0D6DCBE1250D4A7D00338E28 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBDF250D4A7D00338E28 /* libxpwntool.a */; };
+		0D6DCBF5250E6ABE00338E28 /* libcbpatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBF4250E6ABE00338E28 /* libcbpatcher.a */; };
+		0D6DCBF6250E6ABE00338E28 /* libcbpatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBF4250E6ABE00338E28 /* libcbpatcher.a */; };
+		0D6DCBF7250E979500338E28 /* libidevicerestore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DCBBD250C2FE300338E28 /* libidevicerestore.a */; };
+		0D6DCBFA250E982000338E28 /* Jailbreak_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6DCBF8250E982000338E28 /* Jailbreak_Old.swift */; };
 		0D6DE84324D9D75400A57154 /* libfragmentzip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */; };
 		0D6DE84424D9D75400A57154 /* libusbmuxd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */; };
 		0D6DE84524D9D75400A57154 /* libimobiledevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */; };
@@ -44,21 +54,18 @@
 		0D86FBE124E813700029F3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D86FBDF24E813700029F3FC /* Main.storyboard */; };
 		0D86FBED24E813700029F3FC /* Deca5__Older_Macs_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBEC24E813700029F3FC /* Deca5__Older_Macs_Tests.swift */; };
 		0D86FBF824E813700029F3FC /* Deca5__Older_Macs_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86FBF724E813700029F3FC /* Deca5__Older_Macs_UITests.swift */; };
-		0D8B6C8924DDFBE7008F8289 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
 		0D8B6C8B24DE208E008F8289 /* Boot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B6C8A24DE208E008F8289 /* Boot.swift */; };
 		0D99528A24DB2DCA00A7962C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99528924DB2DCA00A7962C /* Loader.swift */; };
+		0D9CB368250C138B008E6A92 /* Jailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CB367250C138B008E6A92 /* Jailbreak.swift */; };
 		0DBCFB7724D1F46E00E1CC97 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBCFB7624D1F46E00E1CC97 /* ViewCoordinator.swift */; };
 		0DBCFB7924D1FEEA00E1CC97 /* Restore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBCFB7824D1FEEA00E1CC97 /* Restore.swift */; };
 		0DBCFB8124D3077000E1CC97 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBCFB8024D3077000E1CC97 /* Functions.swift */; };
 		0DBCFB8424D30EF600E1CC97 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0DBCFB8324D30EF600E1CC97 /* ZIPFoundation */; };
-		0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */; };
 		0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6FD25324DF6B500093BB8D /* libcurl.dylib */; };
 		0DDEFA5324E81404005D51D2 /* libfragmentzip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */; };
 		0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */; };
 		0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84024D9D75400A57154 /* libcrypto.dylib */; };
 		0DDEFA5624E81404005D51D2 /* libirecovery.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83E24D9D75400A57154 /* libirecovery.dylib */; };
-		0DDEFA5724E81404005D51D2 /* libiboot32patcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */; };
-		0DDEFA5824E81404005D51D2 /* libxpwntool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */; };
 		0DDEFA5924E81404005D51D2 /* libplist.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83F24D9D75400A57154 /* libplist.dylib */; };
 		0DDEFA5A24E81404005D51D2 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE84224D9D75400A57154 /* libssl.dylib */; };
 		0DDEFA5B24E81404005D51D2 /* libusbmuxd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */; };
@@ -122,6 +129,7 @@
 			files = (
 				0D6DE84E24D9D76100A57154 /* libirecovery.dylib in Embed Libraries */,
 				0D6DE85224D9D76700A57154 /* libzip.dylib in Embed Libraries */,
+				0D6DCBDD250D444E00338E28 /* liblzss.dylib in Embed Libraries */,
 				0D6FD25524DF6B590093BB8D /* libcurl.dylib in Embed Libraries */,
 				0D6DE85124D9D76600A57154 /* libusbmuxd.dylib in Embed Libraries */,
 				0D6DE84D24D9D76000A57154 /* libimobiledevice.dylib in Embed Libraries */,
@@ -163,6 +171,7 @@
 			files = (
 				0DF9AB5924E9DA1700F94476 /* libirecovery.dylib in Embed Libraries */,
 				0DF9AB5D24E9DA1D00F94476 /* libzip.dylib in Embed Libraries */,
+				0D6DCBDE250D445100338E28 /* liblzss.dylib in Embed Libraries */,
 				0DF9AB5C24E9DA1B00F94476 /* libusbmuxd.dylib in Embed Libraries */,
 				0DF9AB5824E9DA1600F94476 /* libimobiledevice.dylib in Embed Libraries */,
 				0DF9AB5624E9DA1400F94476 /* libcurl.dylib in Embed Libraries */,
@@ -177,7 +186,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D0EA82324E0437C005C0DBF /* libidevicerestore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidevicerestore.a; sourceTree = "<group>"; };
 		0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libidevicerestore-old.a"; sourceTree = "<group>"; };
 		0D62600524CE254800330F97 /* Deca5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deca5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62600824CE254800330F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +201,12 @@
 		0D62602524CE254A00330F97 /* Deca5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Deca5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62602924CE254A00330F97 /* Deca5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deca5UITests.swift; sourceTree = "<group>"; };
 		0D62602B24CE254A00330F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6A26F924FC1272008B400C /* libiboot32patcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiboot32patcher.a; sourceTree = "<group>"; };
+		0D6DCBBD250C2FE300338E28 /* libidevicerestore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidevicerestore.a; sourceTree = "<group>"; };
+		0D6DCBDA250D444400338E28 /* liblzss.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblzss.dylib; sourceTree = "<group>"; };
+		0D6DCBDF250D4A7D00338E28 /* libxpwntool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxpwntool.a; sourceTree = "<group>"; };
+		0D6DCBF4250E6ABE00338E28 /* libcbpatcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcbpatcher.a; sourceTree = "<group>"; };
+		0D6DCBF8250E982000338E28 /* Jailbreak_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailbreak_Old.swift; sourceTree = "<group>"; };
 		0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfragmentzip.dylib; sourceTree = "<group>"; };
 		0D6DE83C24D9D75300A57154 /* libusbmuxd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libusbmuxd.dylib; sourceTree = "<group>"; };
 		0D6DE83D24D9D75400A57154 /* libimobiledevice.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libimobiledevice.dylib; sourceTree = "<group>"; };
@@ -217,9 +231,9 @@
 		0D86FBF324E813700029F3FC /* Deca5 (Older Macs)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deca5 (Older Macs)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D86FBF724E813700029F3FC /* Deca5__Older_Macs_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deca5__Older_Macs_UITests.swift; sourceTree = "<group>"; };
 		0D86FBF924E813700029F3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiboot32patcher.a; sourceTree = "<group>"; };
 		0D8B6C8A24DE208E008F8289 /* Boot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boot.swift; sourceTree = "<group>"; };
 		0D99528924DB2DCA00A7962C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		0D9CB367250C138B008E6A92 /* Jailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailbreak.swift; sourceTree = "<group>"; };
 		0DBCFB7324D09E3A00E1CC97 /* MazzardM-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MazzardM-Bold.otf"; sourceTree = "<group>"; };
 		0DBCFB7624D1F46E00E1CC97 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		0DBCFB7824D1FEEA00E1CC97 /* Restore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restore.swift; sourceTree = "<group>"; };
@@ -227,7 +241,6 @@
 		0DBCFB8024D3077000E1CC97 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0DBCFD2624D380C100E1CC97 /* Deca5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Deca5-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DBCFD2724D380C200E1CC97 /* crossover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crossover.h; sourceTree = "<group>"; };
-		0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxpwntool.a; sourceTree = "<group>"; };
 		0DDEFA6024E817EA005D51D2 /* Functions_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions_Old.swift; sourceTree = "<group>"; };
 		0DDEFA6624E850A3005D51D2 /* Restore_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restore_Old.swift; sourceTree = "<group>"; };
 		0DF9AB4C24E89E2300F94476 /* Boot_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boot_Old.swift; sourceTree = "<group>"; };
@@ -240,18 +253,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D48FD0E24EDCCDA0024E344 /* libidevicerestore.a in Frameworks */,
-				0DBCFD2F24D3918A00E1CC97 /* libxpwntool.a in Frameworks */,
-				0D8B6C8924DDFBE7008F8289 /* libiboot32patcher.a in Frameworks */,
+				0D6DCBBE250C2FE300338E28 /* libidevicerestore.a in Frameworks */,
+				0D6A26FA24FC1272008B400C /* libiboot32patcher.a in Frameworks */,
 				0D6DE84624D9D75400A57154 /* libirecovery.dylib in Frameworks */,
 				0D6FD25424DF6B500093BB8D /* libcurl.dylib in Frameworks */,
-				0D56427E24DE348F005F4505 /* libiboot32patcher.a in Frameworks */,
 				0D6DE84524D9D75400A57154 /* libimobiledevice.dylib in Frameworks */,
 				0D6DE84824D9D75400A57154 /* libcrypto.dylib in Frameworks */,
+				0D6DCBDB250D444400338E28 /* liblzss.dylib in Frameworks */,
+				0D6DCBF5250E6ABE00338E28 /* libcbpatcher.a in Frameworks */,
 				0D6DE84724D9D75400A57154 /* libplist.dylib in Frameworks */,
 				0D6DE84324D9D75400A57154 /* libfragmentzip.dylib in Frameworks */,
 				0DBCFB8424D30EF600E1CC97 /* ZIPFoundation in Frameworks */,
 				0D6DE84424D9D75400A57154 /* libusbmuxd.dylib in Frameworks */,
+				0D6DCBE0250D4A7D00338E28 /* libxpwntool.a in Frameworks */,
 				0D6DE84924D9D75400A57154 /* libzip.dylib in Frameworks */,
 				0D6DE84A24D9D75400A57154 /* libssl.dylib in Frameworks */,
 			);
@@ -277,16 +291,18 @@
 			files = (
 				0DDEFA5524E81404005D51D2 /* libcrypto.dylib in Frameworks */,
 				0DDEFA5424E81404005D51D2 /* libimobiledevice.dylib in Frameworks */,
-				0D48FD0D24EDCCD30024E344 /* libidevicerestore-old.a in Frameworks */,
+				0D6A26FB24FC1272008B400C /* libiboot32patcher.a in Frameworks */,
 				0DDEFA5124E81404005D51D2 /* libcurl.dylib in Frameworks */,
 				0DDEFA5C24E81404005D51D2 /* libzip.dylib in Frameworks */,
-				0DDEFA5724E81404005D51D2 /* libiboot32patcher.a in Frameworks */,
+				0D6DCBE1250D4A7D00338E28 /* libxpwntool.a in Frameworks */,
+				0D6DCBF6250E6ABE00338E28 /* libcbpatcher.a in Frameworks */,
 				0DDEFA5924E81404005D51D2 /* libplist.dylib in Frameworks */,
 				0DDEFA5324E81404005D51D2 /* libfragmentzip.dylib in Frameworks */,
-				0DDEFA5824E81404005D51D2 /* libxpwntool.a in Frameworks */,
 				0DDEFA5B24E81404005D51D2 /* libusbmuxd.dylib in Frameworks */,
 				0DDEFA5624E81404005D51D2 /* libirecovery.dylib in Frameworks */,
+				0D6DCBF7250E979500338E28 /* libidevicerestore.a in Frameworks */,
 				0DDEFA5F24E81499005D51D2 /* ZIPFoundation in Frameworks */,
+				0D6DCBDC250D444400338E28 /* liblzss.dylib in Frameworks */,
 				0DDEFA5A24E81404005D51D2 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,10 +395,12 @@
 		0D6DE77524D9C77200A57154 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0DBCFD2E24D3918A00E1CC97 /* libxpwntool.a */,
-				0D8B6C8824DDFBE7008F8289 /* libiboot32patcher.a */,
-				0D0EA82324E0437C005C0DBF /* libidevicerestore.a */,
+				0D6DCBDF250D4A7D00338E28 /* libxpwntool.a */,
+				0D6DCBBD250C2FE300338E28 /* libidevicerestore.a */,
+				0D6A26F924FC1272008B400C /* libiboot32patcher.a */,
 				0D48FD0C24EDCCD30024E344 /* libidevicerestore-old.a */,
+				0D6DCBF4250E6ABE00338E28 /* libcbpatcher.a */,
+				0D6DCBDA250D444400338E28 /* liblzss.dylib */,
 				0D6FD25324DF6B500093BB8D /* libcurl.dylib */,
 				0D6DE84024D9D75400A57154 /* libcrypto.dylib */,
 				0D6DE83B24D9D75300A57154 /* libfragmentzip.dylib */,
@@ -405,6 +423,7 @@
 				0D86FBDB24E8136D0029F3FC /* Home_Old.swift */,
 				0DDEFA6624E850A3005D51D2 /* Restore_Old.swift */,
 				0DF9AB4C24E89E2300F94476 /* Boot_Old.swift */,
+				0D6DCBF8250E982000338E28 /* Jailbreak_Old.swift */,
 				0DDEFA6024E817EA005D51D2 /* Functions_Old.swift */,
 				0D86FBDD24E813700029F3FC /* Assets.xcassets */,
 				0D86FBDF24E813700029F3FC /* Main.storyboard */,
@@ -447,6 +466,7 @@
 				0D62600A24CE254800330F97 /* Home.swift */,
 				0DBCFB7824D1FEEA00E1CC97 /* Restore.swift */,
 				0D8B6C8A24DE208E008F8289 /* Boot.swift */,
+				0D9CB367250C138B008E6A92 /* Jailbreak.swift */,
 				0DBCFB7624D1F46E00E1CC97 /* ViewCoordinator.swift */,
 			);
 			path = Controllers;
@@ -714,6 +734,7 @@
 				0DBCFB7724D1F46E00E1CC97 /* ViewCoordinator.swift in Sources */,
 				0DBCFB8124D3077000E1CC97 /* Functions.swift in Sources */,
 				0D99528A24DB2DCA00A7962C /* Loader.swift in Sources */,
+				0D9CB368250C138B008E6A92 /* Jailbreak.swift in Sources */,
 				0D6DE85E24D9EE3000A57154 /* libprerestore.c in Sources */,
 				0D62600924CE254800330F97 /* AppDelegate.swift in Sources */,
 			);
@@ -743,6 +764,7 @@
 				0DF9AB4D24E89E2300F94476 /* Boot_Old.swift in Sources */,
 				0D86FBDC24E8136D0029F3FC /* Home_Old.swift in Sources */,
 				0DF9AB5024E95E3800F94476 /* SYFlatButton.m in Sources */,
+				0D6DCBFA250E982000338E28 /* Jailbreak_Old.swift in Sources */,
 				0DDEFA5D24E81468005D51D2 /* libprerestore.c in Sources */,
 				0D86FBDA24E8136D0029F3FC /* AppDelegate.swift in Sources */,
 				0DDEFA6124E817EA005D51D2 /* Functions_Old.swift in Sources */,
@@ -976,7 +998,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				"OTHER_CFLAGS[arch=*]" = "";
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = (
@@ -1018,7 +1040,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				"OTHER_CFLAGS[arch=*]" = "";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-L/usr/local/lib",
@@ -1137,7 +1159,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-lcrypto",
 					"-lz",
@@ -1172,7 +1194,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-lcrypto",
 					"-lz",

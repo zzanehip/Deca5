@@ -42,6 +42,12 @@ class Home_Old: NSViewController {
         }
         
     }
+    @IBAction func jailbreak(_ sender: Any) {
+        if let controller = self.storyboard?.instantiateController(withIdentifier: "jailbreakview") as? NSViewController {
+        self.view.window?.contentViewController = controller
+        }
+        
+    }
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.

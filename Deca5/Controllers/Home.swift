@@ -29,13 +29,19 @@ struct Home: View {
                     Button(action: { self.cScreen.screen = .restore} ) {
                            Text("Restore").font(Font.custom("Mazzard M Medium", size: 14)).frame(width:80)
                     
-                    }.padding(.leading, 260)
+                    }.padding(.leading, 220)
 
                     Spacer()
                     Button(action: { self.cScreen.screen = .boot  } ) {
                            Text("Boot").font(Font.custom("Mazzard M Medium", size: 14)).frame(width:80)
                     
-                    }.padding(.trailing, 260)
+                    }
+                    
+                    Spacer()
+                    Button(action: { self.cScreen.screen = .jailbreak  } ) {
+                           Text("Jailbreak").font(Font.custom("Mazzard M Medium", size: 14)).frame(width:80)
+                    
+                    }.padding(.trailing, 220)
 
                 }.padding(.top, 40)
             Spacer()

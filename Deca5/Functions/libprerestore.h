@@ -24,6 +24,7 @@ int extract_outside_component_boot(const char* path, unsigned char** component_d
 static int read_file_into_buffer(char* path, char** buf, size_t* len);
 int boot_ibec(const char* outside_path);
 int boot_ibss(const char* outside_path);
+int download_component(const char* url, const char* component, const char* outdir);
 ///
 
 struct swift_callbacks {
