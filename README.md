@@ -76,6 +76,8 @@ App on Springboard         |  In App
 * @a1exdandy for A5 Checkm8.
 * @nyansatan for A5 Checkm8.
 * @synackuk for A5 Checkm8 and idevicerestore work. 
+* @JonathanSeals for CBPatcher.
+* @Chronic-Dev for Medicine and Anthrax.
 * @axi0mx for Checkm8.
 * @libimobiledevice for idevicerestore. 
 * @iH8Sn0w for iBoot32Patcher.
