@@ -67,7 +67,7 @@ App on Springboard         |  In App
 		* https://github.com/zzanehip/medicine 
 
 ## Version History
-	* v1.2 Beta 2 - Fixes a variety of bugs and adds stablity improvements. 
+	* v1.2 Beta 2 - Fixes a variety of bugs and adds stability improvements. 
 	* v1.2 Beta - Adds initial Jailbreak support for iOS 5, 6, 7.
 	* v1.1.1 - Resolves potential crashing on High Sierra (10.13) and lower due to issues with libSystemB.dylib. Corrects some grammar too (free of charge 😉).
 	* v1.1 - Adds "older Macs" build which adds support for 10.11 to 10.14. Various other bug fixes and compilation performance improvements, as well. 
